@@ -1,0 +1,43 @@
+#**
+ *  Query settings for grouping by fields,
+ *  e.g.: Manufacturer or Popularity
+ *#
+
+#set($queryOpts = $params.get("queryOpts"))
+
+#if($queryOpts == "Club")
+  <div>
+    #set($groupF = $request.params.get('Club.field'))
+
+    <label #annTitle("Add the &group.field parameter. Multiselect is supported")>
+      Club By:
+      <select id="Club" name="Club.field" multiple="true">
+        ## TODO: Handle multiple selects correctly
+        ## TODO: fix empty / "No Group" selection
+
+        <option value="Note_Fifa"
+          #if($groupF == 'Note_Fifa')selected="true"#end
+        >
+          No Group
+        </option>
+
+        <option value="Age"
+          #if($groupF == 'Age')selected="true"#end
+        >
+          Age
+        </option>
+
+        <option value="Potentiel_global"
+          #if($groupF == 'Potentiel_global')selected="true"#end
+        >
+          Potentiel_global
+        </option>
+
+      </select>
+    </label>
+
+    <input type="hidden" name="Club" value="true"/>
+
+  </div>
+
+#end

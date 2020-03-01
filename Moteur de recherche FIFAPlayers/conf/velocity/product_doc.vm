@@ -1,0 +1,44 @@
+#**
+ *  Render a hit representing a Product
+ *  assumed to have a field called "name"
+ *#
+
+<div class="result-title"><b>#field('Nom')</b><span class="mlt">   #if($params.getBool('mlt', false) == false)<a href="#lensNoQ&q=id:$docId&mlt=true"></a>#end</span></div>
+##do we have a physical store for this product
+#set($store = $doc.getFieldValue('Flag'))
+#if($store)<div class="map"><img src= #field('Flag')&width="180" height="60"&maptype=roadmap&markers=$doc.getFieldValue('Flag')&sensor=true" /><div><small><a target="_map" href=#field('Flag')> Drapeau</a></small></div></div>#end
+#if($store)<div class="map2"><img src= #field('Club_Logo')&width="160" height="50"&maptype=roadmap&markers=$doc.getFieldValue('Club_Logo')&sensor=true" /><div><small><a target="_map" href=#field('Club_Logo')> Logo du Club</a></small></div></div>#end
+#if($store)<div class="map3"><img src= #field('Photo')&width="150" height="45"&maptype=roadmap&markers=$doc.getFieldValue('Photo')&sensor=true" /><div><small><a target="_map" href=#field('Photo')> Photo joueur</a></small></div></div>#end
+<div>id : #field('ID')</div>
+<div>Age : #field('Age') ans</div>
+<div>Club : #field('Club')</div>
+<div>Nationalite: #field('Nationalite')</div>
+<div>Note Fifa : #field('Note_Fifa') /100</div>
+<div>Potentiel global : #field('Potentiel_global')</div>
+<div>Salaire par mois : #field('Salaire_mois')</div>
+<div>Valeur sur le marché : #field('Valeur')</div>
+<div>Clause libératoire : #field('Clause')</div>
+<div>Taille par inche : #field('Taille')</div>
+<div>Poids par lbs : #field('Poids')</div>
+
+
+
+<div class="mlt">
+  #set($mlt = $mltResults.get($docId))
+  #set($mltOn = $params.getBool('mlt'))
+  #if($mltOn == true)<div class="field-name">Dans la même équipe</div>#end
+  #if ($mltOn && $mlt && $mlt.size() > 0)
+  <ul>
+    #foreach($mltHit in $mlt)
+      #set($mltId = $mltHit.getFieldValue('ID'))
+      <li><div><a href="#url_for_home?q=id:$mltId">$mltId</a></div><div><span class="field-name">Name:</span> $mltHit.getFieldValue('Nom')</div>
+        <div><span class="field-name">Club:</span> $!number.currency($mltHit.getFieldValue('Club')) <span class="field-name"></span> $mltHit.getFieldValue('Club')</div>
+
+      </li>
+    #end
+  </ul>
+  #elseif($mltOn && $mlt.size() == 0)
+    <div>No Similar Items Found</div>
+  #end
+</div>
+#parse('debug.vm')

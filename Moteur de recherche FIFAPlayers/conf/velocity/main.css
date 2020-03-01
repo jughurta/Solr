@@ -1,0 +1,276 @@
+.fifa01	{
+	color:navy;
+	font-weight: bold;
+	background-color: #C0C0C0;
+	border:1px black solid;
+	font-size: 100%;
+
+}
+
+#admin{
+  text-align: right;
+  vertical-align: top;
+}
+
+#head{
+  width: 100%;
+}
+.array-field {
+  border: 2px solid #474747;
+  background: #FFE9D8;
+  padding: 5px;
+  margin: 5px;
+}
+
+.array-field-list li {
+  list-style: circle;
+  margin-left: 20px;
+}
+
+.parsed_query_header {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.parsed_query {
+  font-family: Courier, Courier New, monospaced;
+  font-size: 10pt;
+  font-weight: normal;
+}
+/*Modifer*/
+body {
+  font-family: Helvetica, Arial, monospace;
+  font-size: 10pt;
+}
+/*modifier*/
+a {
+  color: navy;
+	font-weight: bold;
+	font-size: 9pt
+}
+/*modifier*/
+h3 {
+  color: red;
+  width: 200px;
+	font-family: 'Arial Black', Gadget, sans-serif;
+  margin: 5px 15px 5px 600px;
+  border-style: none;
+}
+
+.navigators {
+  float: left;
+  margin: 5px;
+  margin-top: 0px;
+  width: 185px;
+  padding: 5px;
+  top: -20px;
+  position: relative;
+}
+
+.tabs-bar {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid;
+  border-width: 0px 0px 1px 0px;
+}
+.tab {
+  font-weight: bold;
+  padding: 5px;
+  margin: 0px 5px;
+  border: 1px solid;
+  background-color: #dddddd;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.tab:hover {
+  background: #FEC293;
+}
+.tab.selected {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.navigators h2 {
+	color: navy;
+	border:2px navy solid;
+  background: #C0C0C0;
+  padding: 2px 5px;
+	font-family: Jazz LET, fantasy;
+	font-style: oblique;
+}
+/*Modifer*/
+.navigators ul {
+  list-style: outside;
+  margin: 1;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+/*Modifer*/
+.navigators ul li {
+  color: #2F4F4F;
+  padding: 2px;
+}
+
+
+
+.facet-field {
+	color:#B22222;
+	background-color: #C0C0C0;
+  font-weight: black;
+	font-family: Jazz LET, fantasy;
+	font-style: oblique;
+	border:2px #B22222 solid;
+  font-size: 15pt;
+}
+
+.highlight {
+  color: white;
+  background-color: gray;
+  border: 1px black solid;
+}
+
+.highlight-box {
+  margin-left: 15px;
+}
+
+.field-name {
+  font-weight: red;
+}
+
+.highlighted-facet-field {
+  background: white;
+}
+
+.constraints {
+  margin-top: 10px;
+}
+
+#query-form{
+  width: 75%;
+}
+
+
+
+.query-box, .constraints {
+  padding: 10px;
+  margin: 2px;
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 0.15em;
+  color: navy;
+}
+
+.query-box #q {
+  margin-left: 6px;
+  width: 60%;
+  height: 50px;
+  border: 3px solid #999;
+  font-size: 1em;
+  padding: 0.4em;
+  color: black;
+}
+
+.query-box {
+
+}
+
+.query-boost {
+
+  top: 10px;
+  left: 50px;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.query-box .inputs{
+  left: 180px;
+  position: relative;
+
+}
+
+#logo {
+  width: 30px;
+  margin: 5px 1px 10px 50px;
+  border-style: none;
+  color: Red;
+}
+
+.pagination {
+  padding-left: 33%;
+  background: #eee;
+  margin: 5px;
+  margin-left: 210px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.result-document {
+  border: 1px solid #999;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 210px;
+  margin-bottom: 15px;
+}
+
+.result-document div{
+  padding: 5px;
+}
+
+.result-title{
+  width:60%;
+}
+
+.result-body{
+  background: #ddd;
+}
+
+.mlt{
+
+}
+
+.map{
+  float: right;
+  position: relative;
+  top: -25px;
+}
+
+.map2{
+  float: right;
+  position: relative;
+  top: 10px;
+}
+
+.map3{
+	float: right;
+	position: relative;
+	top: 30px;
+}
+
+.result-document:nth-child(2n+1) {
+  background-color: #eee;
+}
+
+
+.selected-facet-field {
+  font-weight: bold;
+}
+
+li.show {
+  list-style: disc;
+}
+
+.group-value{
+  font-weight: bold;
+  color: red;
+}
+
+.error {
+  color: white;
+  background-color: red;
+  left: 210px;
+  width:80%;
+  position: relative;
+
+}
